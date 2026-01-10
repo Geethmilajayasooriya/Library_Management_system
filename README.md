@@ -37,74 +37,25 @@ A simple and clean Library Management System built with React (frontend) and Nod
 
 ---
 
-## Setup & Run (local)
-
-1. Install and start the database (MySQL). Create a database named `Library`.
-
-2. (Optional) Example SQL for the minimal `users` table:
-
-```sql
-CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  email VARCHAR(255) UNIQUE NOT NULL,
-  password VARCHAR(255) NOT NULL
-);
-```
 
 3. Start backend
 
-```bash
 cd backend
-npm install
-npm start
-```
-
-By default the backend listens on port 8080 and uses credentials from `server.js` (edit there to match your MySQL user/password).
+node server.js
 
 4. Start frontend
 
-```bash
-cd ..
 npm install
 npm start
-```
+
 
 Open http://localhost:3000 in your browser.
 
----
 
 ## Usage notes
 
 - Sign up via the **Sign up** page to create accounts; passwords are stored hashed.
 - Contact messages are currently logged by the backend; you can configure email or store messages in DB in `backend/server.js`.
 - If an existing plaintext user logs in, the server upgrades the stored password to a secure bcrypt hash automatically.
-
----
-
-## Development & Contribution
-
-- Make changes in your branch, commit, and push to your fork/remote.
-- Typical workflow:
-
-```bash
-git checkout -b feature/your-change
-# make changes
-git add .
-git commit -m "feat: short description"
-git push origin feature/your-change
-```
-
----
-
-## Changelog (high level)
-
-- UI polish: improved homepage and auth pages, added feature cards and stats
-- Security: password hashing and safer login flow
-- New: Signup, Contact form + backend endpoint
-
----
-
-If you want, I can commit these README changes into your repository and push them to your remote branch now. Reply "Yes, push" and I'll run the Git commands (I'll check for a configured remote first).
 
 
