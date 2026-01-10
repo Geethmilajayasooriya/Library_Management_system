@@ -1,41 +1,59 @@
 # 📚 Library Management System (LMS)
 
-A simple and clean Library Management System built with React (frontend) and Node.js/Express + MySQL (backend). This repo includes both frontend and backend code; the frontend runs on http://localhost:3000 and the backend API runs on http://localhost:8080 by default.
+A **full-stack Library Management System** built with **React** (frontend) and **Node.js/Express + MySQL** (backend).  
+This project provides a clean and responsive interface to manage books, members, staff, and lending operations.
 
----
+## ✨ Features
 
-## ✨ What’s new in this version
+### Authentication
+- ✅ **Sign Up & Login** with hashed passwords (bcrypt)
+- ✅ Inline error messages and loading states
+- ✅ Server automatically upgrades plaintext passwords to bcrypt
 
-- Beautiful, responsive UI for auth and homepage (hero, stats, feature cards)
-- Signup page with client-side validation and server-side registration endpoint
-- Passwords are hashed with bcrypt on registration and verified on login
-- Contact page and backend `/contact` endpoint (message logging; easy to wire to email/DB)
-- Improved auth experience: inline errors, loading states, and accessible forms
-- Soft, balanced color palette and consistent card surfaces
-- Navbar brand updated to **LMS** and a clear site structure
+### Home Page
+- 🏠 Overview after login
+- Dynamic statistics fetched from the backend
+- Feature cards highlighting different modules
 
----
+### Consoles / Management
+- 📚 **Books Console**: View, Add, Edit, Delete books  
+- 👩‍💼 **Staff Console**: View, Add, Edit, Delete staff records  
+- 👥 **Member Console**: View, Add, Edit, Delete library members  
+- 📖 **Lending Console**: View, Add, Edit, Delete lending transactions  
 
-## 🚀 Features
-
-- Authentication: **Sign up** and **Log in** (passwords hashed)
-- Pages: Home, Books, Members, Staff, Lending, Contact
-- Home: Hero, dynamic stats (fetched from API), feature cards
-- Backend API endpoints (examples):
-  - POST `/users/register` — register a new user
-  - POST `/users` — login (returns user without password)
-  - POST `/contact` — submit a contact message
-  - Standard CRUD endpoints for `/book`, `/member`, `/staff`, `/lending`
-
----
+### Contact
+- 📬 Submit messages via contact page  
+- Backend logs messages (can be wired to email or database)
 
 ## 🛠️ Tech Stack
 
-- Frontend: React, React Router DOM, React-Bootstrap, Bootstrap 5
-- Backend: Node.js, Express, mysql2, bcrypt
-- Database: MySQL
+**Frontend:** React, React Router DOM, React-Bootstrap, Bootstrap 5  
+**Backend:** Node.js, Express, mysql2, bcrypt  
+**Database:** MySQL  
 
 ---
+
+## 🚀 Backend API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/users/register` | Register a new user |
+| POST | `/users` | Login (returns user without password) |
+| POST | `/contact` | Submit a contact message |
+| GET/POST/PUT/DELETE | `/book` | Manage books |
+| GET/POST/PUT/DELETE | `/member` | Manage members |
+| GET/POST/PUT/DELETE | `/staff` | Manage staff |
+| GET/POST/PUT/DELETE | `/lending` | Manage lending transactions |
+
+---
+
+## ⚡ Installation & Running
+
+### Backend
+
+cd backend
+npm install
+node server.js
 
 
 3. Start backend
